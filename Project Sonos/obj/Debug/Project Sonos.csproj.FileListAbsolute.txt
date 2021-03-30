@@ -1,0 +1,34 @@
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.exe.config
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.exe
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.pdb
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csprojAssemblyReference.cache
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\MainWindow.g.cs
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\App.g.cs
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos_MarkupCompile.cache
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos_MarkupCompile.lref
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\MainWindow.baml
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.g.resources
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project_Sonos.Properties.Resources.resources
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csproj.GenerateResource.cache
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csproj.CoreCompileInputs.cache
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.exe
+C:\Users\eroussin\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.pdb
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.exe.config
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.exe
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.pdb
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csprojAssemblyReference.cache
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\MainWindow.g.cs
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\App.g.cs
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos_MarkupCompile.cache
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos_MarkupCompile.lref
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\MainWindow.baml
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.g.resources
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project_Sonos.Properties.Resources.resources
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csproj.GenerateResource.cache
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csproj.CoreCompileInputs.cache
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.exe
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.pdb
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\SonosLib.dll
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\SonosLib.pdb
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csproj.CopyComplete
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\App.baml

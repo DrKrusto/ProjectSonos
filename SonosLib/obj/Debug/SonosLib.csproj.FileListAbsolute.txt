@@ -1,0 +1,6 @@
+C:\Users\evanr\source\repos\Project Sonos\SonosLib\bin\Debug\SonosLib.dll
+C:\Users\evanr\source\repos\Project Sonos\SonosLib\bin\Debug\SonosLib.pdb
+C:\Users\evanr\source\repos\Project Sonos\SonosLib\obj\Debug\SonosLib.csprojAssemblyReference.cache
+C:\Users\evanr\source\repos\Project Sonos\SonosLib\obj\Debug\SonosLib.csproj.CoreCompileInputs.cache
+C:\Users\evanr\source\repos\Project Sonos\SonosLib\obj\Debug\SonosLib.dll
+C:\Users\evanr\source\repos\Project Sonos\SonosLib\obj\Debug\SonosLib.pdb
