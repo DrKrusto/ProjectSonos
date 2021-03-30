@@ -4,7 +4,7 @@ Project Sono est une banque de son interactive en WPF.
 
 ## Interface 
 
-![interface](./img/interface.png)
+![interface](./img/interface.PNG)
 
 ---
 
