@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace SonosLib
 {
@@ -13,13 +15,21 @@ namespace SonosLib
             this.Name = "Default1";
             this.Key = "Default2";
             this.PathToSound = "Default3";
-            this.PathToImage = "Default4";
+            this.Image = null;
         }
 
         public string Name { get; set; }
         public string PathToSound { get; set; }
         public string Key { get; set; }
-        public string PathToImage { get; set; }
+        public BitmapImage Image { get; set; }
+
+        public BitmapImage ChangeImage(string path)
+        {
+            BitmapImage bitmap = new BitmapImage(new Uri(path));
+            this.Image = bitmap;
+            return bitmap;
+        }
+
         public override string ToString()
         {
             return this.Name;

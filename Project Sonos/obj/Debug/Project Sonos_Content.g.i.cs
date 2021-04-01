@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("1200px-button_icon_red.svg.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("ff915bd5e6_50165784_pomme-hot84a1tg-global.jpg")]
 
 

@@ -126,5 +126,8 @@
   <ItemGroup>
     <Resource Include="1200px-Button_Icon_Red.svg.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ff915bd5e6_50165784_pomme-hot84a1tg-global.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
