@@ -23,18 +23,16 @@ namespace Project_Sonos
     /// </summary>
     public partial class MainWindow : Window
     {
-        MediaPlayer mediaPlayer = new MediaPlayer();
         ObservableCollection<Sound> sounds = new ObservableCollection<Sound>();
 
         public MainWindow()
         {
             InitializeComponent();
-            MouseDown += MainWindow_MouseDown;
-
+            DataContext = sounds;
             this.lb_sounds.ItemsSource = sounds;
         }
 
-        private void MainWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        private void MoveWindow(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
             {
@@ -62,30 +60,11 @@ namespace Project_Sonos
             this.sounds.Add(new Sound());
         }
 
-        private void btn_changeSound_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void btn_changeSoundName_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void lb_sounds_MouseEnter(object sender, MouseEventArgs e)
-        {
-
-        }
-
         private void ellipse_soundButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             if (this.lb_sounds.SelectedIndex != -1)
             {
-                if (this.sounds[this.lb_sounds.SelectedIndex].PathToSound != "Default3")
-                {
-                    mediaPlayer.Open(new Uri(this.sounds[this.lb_sounds.SelectedIndex].PathToSound));
-                    mediaPlayer.Play();
-                }
+                this.sounds[this.lb_sounds.SelectedIndex].PlaySound();
             }
         }
 
@@ -94,7 +73,7 @@ namespace Project_Sonos
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
-                this.sounds[this.lb_sounds.SelectedIndex].PathToSound = openFileDialog.FileName;
+                this.sounds[this.lb_sounds.SelectedIndex].ChangeSound(openFileDialog.FileName);
             }
         }
 
@@ -103,13 +82,22 @@ namespace Project_Sonos
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
-                this.sounds[this.lb_sounds.SelectedIndex].PathToImage = openFileDialog.FileName;
+                this.sounds[this.lb_sounds.SelectedIndex].ChangeImage(openFileDialog.FileName);
             }
         }
 
         private void mi_delete_Click(object sender, RoutedEventArgs e)
         {
             this.sounds.RemoveAt(this.lb_sounds.SelectedIndex);
+        }
+
+        private void tb_changeName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                TextBox tb  = (TextBox)sender;
+                Keyboard.ClearFocus();
+            }
         }
     }
 }

@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -128,6 +129,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ff915bd5e6_50165784_pomme-hot84a1tg-global.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultSoundImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -10,24 +10,67 @@ namespace SonosLib
 {
     public class Sound
     {
+        private ImageBrush image;
+        private MediaPlayer mediaPlayer;
+
         public Sound()
         {
-            this.Name = "Default1";
+            this.Name = "New sound";
             this.Key = "Default2";
-            this.PathToSound = "Default3";
-            this.Image = null;
+            this.PathToSound = "none";
+            this.image = null;
+            this.mediaPlayer = new MediaPlayer();
         }
 
         public string Name { get; set; }
         public string PathToSound { get; set; }
         public string Key { get; set; }
-        public BitmapImage Image { get; set; }
-
-        public BitmapImage ChangeImage(string path)
+        public ImageBrush Image
         {
-            BitmapImage bitmap = new BitmapImage(new Uri(path));
-            this.Image = bitmap;
-            return bitmap;
+            get
+            {
+                if (this.image == null)
+                {
+                    image = new ImageBrush();
+                    BitmapImage bit = new BitmapImage();
+                    bit.BeginInit();
+                    bit.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
+                    bit.CacheOption = BitmapCacheOption.OnLoad;
+                    bit.UriSource = new Uri(@"C:\Users\evanr\source\repos\Project Sonos\Project Sonos\1200px-Button_Icon_Red.svg.png");
+                    bit.EndInit();
+                    image.ImageSource = bit;
+                }
+                return image;
+            }
+            set
+            {
+                this.image = value;
+            }
+        }
+
+        public void ChangeImage(string path)
+        {
+            BitmapImage bit = new BitmapImage();
+            bit.BeginInit();
+            bit.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
+            bit.CacheOption = BitmapCacheOption.OnLoad;
+            bit.UriSource = new Uri(path);
+            bit.EndInit();
+            this.image.ImageSource = bit;
+        }
+
+        public void ChangeSound(string path)
+        {
+            this.PathToSound = path;
+        }
+
+        public void PlaySound()
+        {
+            if (this.PathToSound != "none")
+            {
+                mediaPlayer.Open(new Uri(this.PathToSound));
+                mediaPlayer.Play();
+            }
         }
 
         public override string ToString()

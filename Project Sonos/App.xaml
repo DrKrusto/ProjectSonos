@@ -51,10 +51,22 @@
             </Style.Triggers>
         </Style>
         <Style x:Key="topBarButtons" TargetType="Label">
-            <Setter Property="Label.Foreground" Value="Black"/>
+            <Setter Property="Label.Foreground" Value="#FFB9BBBE"/>
+            <Setter Property="Label.Background" Value="Transparent"/>
             <Style.Triggers>
                 <Trigger Property="Label.IsMouseOver" Value="True">
-                    <Setter Property="Label.Foreground" Value="Gray"/>
+                    <Setter Property="Label.Foreground" Value="White"/>
+                    <Setter Property="Label.Background" Value="Gray"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="topBarButtonsQuit" TargetType="Label">
+            <Setter Property="Label.Foreground" Value="#FFB9BBBE"/>
+            <Setter Property="Label.Background" Value="Transparent"/>
+            <Style.Triggers>
+                <Trigger Property="Label.IsMouseOver" Value="True">
+                    <Setter Property="Label.Foreground" Value="White"/>
+                    <Setter Property="Label.Background" Value="#FFE81123"/>
                 </Trigger>
             </Style.Triggers>
         </Style>
