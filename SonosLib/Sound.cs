@@ -1,30 +1,51 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace SonosLib
 {
-    public class Sound
+    public class Sound : INotifyPropertyChanged
     {
         private ImageBrush image;
         private MediaPlayer mediaPlayer;
+        private Key? key;
+        private string name;
+        private string pathToSound;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public Sound()
         {
             this.Name = "New sound";
-            this.Key = "Default2";
+            this.Key = null;
             this.PathToSound = "none";
             this.image = null;
             this.mediaPlayer = new MediaPlayer();
         }
 
-        public string Name { get; set; }
-        public string PathToSound { get; set; }
-        public string Key { get; set; }
+        public string Name {
+            get { return this.name; }
+            set { this.name = value; }
+        }
+
+        public string PathToSound {
+            get { return this.pathToSound; } 
+            set { this.pathToSound = value; }
+        }
+
+        public Key? Key {
+            get { return this.key; } 
+            set { 
+                this.key = value;
+                OnPropertyChanged();
+            } 
+        }
         public ImageBrush Image
         {
             get
@@ -71,6 +92,11 @@ namespace SonosLib
                 mediaPlayer.Open(new Uri(this.PathToSound));
                 mediaPlayer.Play();
             }
+        }
+
+        protected void OnPropertyChanged([CallerMemberName] string key = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(key));
         }
 
         public override string ToString()

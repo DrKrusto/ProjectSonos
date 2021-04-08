@@ -51,3 +51,5 @@ C:\Users\eroussin\source\repos\Project Sonos\ProjectSonos\Project Sonos\obj\Debu
 C:\Users\eroussin\source\repos\Project Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.csproj.CopyComplete
 C:\Users\eroussin\source\repos\Project Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.exe
 C:\Users\eroussin\source\repos\Project Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.pdb
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\KeyBind.g.cs
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\KeyBind.baml

@@ -1,0 +1,23 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_Sonos"
+        xmlns:SonosLib="clr-namespace:SonosLib;assembly=SonosLib" x:Class="Project_Sonos.KeyBind"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="112.5" Width="400" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None" KeyDown="ChangeKeyBind">
+    <Grid Background="#FF36393F">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="23*"/>
+                <RowDefinition Height="89*"/>
+            </Grid.RowDefinitions>
+            <Grid Background="#FF202225" MouseDown="MoveWindow">
+                <Label x:Name="lbl_windowClose" Content="r" HorizontalAlignment="Right" FontFamily="Webdings" MouseDown="CloseWindow" Height="22" Width="22" Style="{DynamicResource topBarButtonsQuit}" Margin="0"/>
+                <Label Content="PROJECT SONOS" HorizontalAlignment="Left" FontFamily="Carlito" Height="24" Foreground="#FFB9BBBE" Margin="0"/>
+            </Grid>
+            <Label x:Name="lbl_Key" Content="{Binding Key, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Background="White" Grid.Row="1"/>
+        </Grid>
+    </Grid>
+</Window>

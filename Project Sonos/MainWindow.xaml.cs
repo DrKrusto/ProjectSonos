@@ -40,27 +40,22 @@ namespace Project_Sonos
             }
         }
 
-        private void lbl_windowMinimize_Click(object sender, RoutedEventArgs e)
+        private void MinimizeWindow(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
 
-        private void lbl_windowClose_MouseDown(object sender, MouseButtonEventArgs e)
+        private void CloseWindow(object sender, MouseButtonEventArgs e)
         {
             this.Close();
         }
 
-        private void lb_sounds_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-        }
-
-        private void btn_newSound_Click(object sender, RoutedEventArgs e)
+        private void NewSound(object sender, RoutedEventArgs e)
         {
             this.sounds.Add(new Sound());
         }
 
-        private void ellipse_soundButton_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void PlaySound(object sender, MouseButtonEventArgs e)
         {
             if (this.lb_sounds.SelectedIndex != -1)
             {
@@ -86,7 +81,7 @@ namespace Project_Sonos
             }
         }
 
-        private void mi_delete_Click(object sender, RoutedEventArgs e)
+        private void DeleteSound(object sender, RoutedEventArgs e)
         {
             this.sounds.RemoveAt(this.lb_sounds.SelectedIndex);
         }
@@ -98,6 +93,20 @@ namespace Project_Sonos
                 TextBox tb  = (TextBox)sender;
                 Keyboard.ClearFocus();
             }
+        }
+
+        private void OpenBindWindow(object sender, RoutedEventArgs e)
+        {
+            if (this.lb_sounds.SelectedIndex != -1)
+            {
+                KeyBind keyBind = new KeyBind((Sound)this.lb_sounds.SelectedItem);
+                keyBind.ShowDialog();
+            }
+        }
+
+        private void PlaySoundFromKey(object sender, KeyEventArgs e)
+        {
+            this.sounds.First(i => i.Key == e.Key).PlaySound();
         }
     }
 }
