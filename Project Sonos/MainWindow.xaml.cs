@@ -30,6 +30,7 @@ namespace Project_Sonos
             InitializeComponent();
             DataContext = sounds;
             this.lb_sounds.ItemsSource = sounds;
+            //this.wp_sounds.DataContext = sounds;
         }
 
         private void MoveWindow(object sender, MouseButtonEventArgs e)
@@ -106,7 +107,8 @@ namespace Project_Sonos
 
         private void PlaySoundFromKey(object sender, KeyEventArgs e)
         {
-            this.sounds.First(i => i.Key == e.Key).PlaySound();
+            if (this.sounds.Any(i => i.Key == e.Key))
+                this.sounds.First(i => i.Key == e.Key).PlaySound();
         }
     }
 }

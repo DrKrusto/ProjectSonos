@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Sonos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="400" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
+        Title="MainWindow" Height="450" Width="456" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
     <Grid Background="#FF36393F">
         <Grid Height="450" KeyDown="PlaySoundFromKey">
             <Grid.RowDefinitions>
@@ -22,10 +22,10 @@
                     </Grid>
                 </Border>
             </Border>
-            <ListBox x:Name="lb_sounds" Margin="10" Background="{x:Null}" BorderBrush="#FF3D3D40" ItemsSource="{Binding}" Focusable="False" ItemContainerStyle="{DynamicResource listContainerStyle}" Grid.Row="2">
+            <ListBox x:Name="lb_sounds" Margin="10" Background="{x:Null}" BorderBrush="#FF3D3D40" ItemsSource="{Binding}" Focusable="False" ItemContainerStyle="{DynamicResource listContainerStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Row="2">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
-                        <WrapPanel IsItemsHost="True" Orientation="Horizontal" AutomationProperties.IsOffscreenBehavior="Default" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.CanContentScroll="False" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+                        <WrapPanel IsItemsHost="True" Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=lb_sounds, Mode=OneWay}"/>
                     </ItemsPanelTemplate>
                 </ListBox.ItemsPanel>
                 <ListBox.ItemTemplate>
@@ -50,8 +50,11 @@
             <Grid Background="#FF202225" MouseDown="MoveWindow">
                 <Label x:Name="lbl_windowClose" Content="r" HorizontalAlignment="Right" FontFamily="Webdings" MouseDown="CloseWindow" Height="22" Width="22" Style="{DynamicResource topBarButtonsQuit}" Margin="0"/>
                 <Label x:Name="lbl_windowMinimize" Content="0" HorizontalAlignment="Right" Margin="0,0,23,0" FontFamily="Webdings" MouseDown="MinimizeWindow" Height="22" Width="22" Style="{DynamicResource topBarButtons}"/>
-                <Label Content="PROJECT SONOS" HorizontalAlignment="Left" FontFamily="Carlito" Height="24" Foreground="#FFB9BBBE" Margin="0"/>
+                <Label x:Name="label" Content="PROJECT SONOS" HorizontalAlignment="Left" FontFamily="Carlito" Height="24" Foreground="#FFB9BBBE" Margin="0"/>
             </Grid>
+            <!--<WrapPanel x:Name="wp_sounds" Height="367" Margin="10" Grid.Row="2" Background="#FF363946">
+
+            </WrapPanel>-->
         </Grid>
     </Grid>
 </Window>
