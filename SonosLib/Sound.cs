@@ -18,6 +18,7 @@ namespace SonosLib
         private Key? key;
         private string name;
         private string pathToSound;
+        static private double volume = 0.5;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Sound()
@@ -27,6 +28,11 @@ namespace SonosLib
             this.PathToSound = "none";
             this.image = null;
             this.mediaPlayer = new MediaPlayer();
+        }
+
+        public MediaPlayer MediaPlayer
+        {
+            get { return this.mediaPlayer; }
         }
 
         public string Name {
@@ -46,6 +52,7 @@ namespace SonosLib
                 OnPropertyChanged();
             } 
         }
+
         public ImageBrush Image
         {
             get
@@ -69,6 +76,12 @@ namespace SonosLib
             }
         }
 
+        static public double Volume
+        {
+            set { Sound.volume = value; }
+            get { return Sound.volume; }
+        }
+
         public void ChangeImage(string path)
         {
             BitmapImage bit = new BitmapImage();
@@ -89,6 +102,7 @@ namespace SonosLib
         {
             if (this.PathToSound != "none")
             {
+                mediaPlayer.Volume = Sound.volume;
                 mediaPlayer.Open(new Uri(this.PathToSound));
                 mediaPlayer.Play();
             }

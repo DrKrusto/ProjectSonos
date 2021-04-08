@@ -5,20 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_Sonos"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="456" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
+        Title="MainWindow" Height="449.833" Width="456" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
     <Grid Background="#FF36393F">
-        <Grid Height="450" KeyDown="PlaySoundFromKey">
+        <Grid KeyDown="PlaySoundFromKey">
             <Grid.RowDefinitions>
-                <RowDefinition Height="23*"/>
-                <RowDefinition Height="40*"/>
-                <RowDefinition Height="387*"/>
+                <RowDefinition Height="25*"/>
+                <RowDefinition Height="57*"/>
+                <RowDefinition Height="368*"/>
             </Grid.RowDefinitions>
             <Border x:Name="border_outerMenuBar" BorderBrush="#FF2B2D30" BorderThickness="0,0,0,1" Grid.Row="1" Margin="0">
                 <Border x:Name="border_menuBar" BorderBrush="#FF202225" BorderThickness="0,0,0,1">
-                    <Grid x:Name="grid_menuButtons" Height="26" Margin="10,6">
-                        <Border x:Name="border_newSound" BorderBrush="{Binding Background, ElementName=btn_newSound}" BorderThickness="1" HorizontalAlignment="Right" Height="21" VerticalAlignment="Center" Width="100" Margin="0,1,0,0" CornerRadius="1" Cursor="Hand">
-                            <Button x:Name="btn_newSound" Content="New sound" Width="101" Click="NewSound" FontFamily="/Project Sonos;component/fonts/#Pragmatica ExtraLight" Margin="-2,-1,-1,-1" Style="{DynamicResource menuButtons}" Foreground="White" Height="21" FontSize="14" VerticalAlignment="Center"/>
+                    <Grid x:Name="grid_menuButtons" Margin="10">
+                        <Border x:Name="border_newSound" BorderBrush="{Binding Background, ElementName=btn_newSound}" BorderThickness="1" HorizontalAlignment="Right" Height="26" VerticalAlignment="Center" Width="120" Margin="0,4,0,5" CornerRadius="3" Cursor="Hand">
+                            <Button x:Name="btn_newSound" Content="New sound" Click="NewSound" FontFamily="/Project Sonos;component/fonts/#Pragmatica ExtraLight" Margin="-1" Style="{DynamicResource menuButtons}" Foreground="White" FontSize="16"/>
                         </Border>
+                        <Slider x:Name="slider_changeVolume" HorizontalAlignment="Left" Margin="22,8,0,9" Width="100" Height="18" VerticalAlignment="Center" ValueChanged="ChangeSoundsVolume" Maximum="1" Value="0.5" FontFamily="Segoe UI Black" />
+                        <Grid HorizontalAlignment="Left" Height="35" Margin="127,0,0,0" VerticalAlignment="Top" Width="35" MouseDown="StopSounds" Cursor="Hand">
+                            <Ellipse x:Name="ellipse_stopSounds" Fill="#FF202225" HorizontalAlignment="Center" Height="35" VerticalAlignment="Center" Width="35" Cursor="Hand"/>
+                            <Label Content=";" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Webdings" Foreground="White" FontSize="20" Height="33" Margin="2,2,3,0" FontWeight="Bold" Background="{x:Null}"/>
+                        </Grid>
+                        <Label Content="X" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Webdings" FontSize="25" Foreground="#FF202225" FontWeight="Bold"/>
                     </Grid>
                 </Border>
             </Border>
@@ -35,8 +41,6 @@
                             <TextBox x:Name="tb_changeName" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="/Project Sonos;component/fonts/#Pragmatica Medium" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" KeyDown="tb_changeName_KeyDown"/>
                             <Grid.ContextMenu>
                                 <ContextMenu>
-                                    <MenuItem Header="{Binding Name}" IsEnabled="False"></MenuItem>
-                                    <Separator/>
                                     <MenuItem x:Name="mi_changeSound" Header="Change sound..." Click="changeSound" />
                                     <MenuItem x:Name="mi_changeKey" Header="Bind this sound to a key..." Click="OpenBindWindow" />
                                     <MenuItem x:Name="mi_changeImage" Header="Change image..." Click="changeImage" />

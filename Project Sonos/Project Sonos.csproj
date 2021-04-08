@@ -140,5 +140,8 @@
   <ItemGroup>
     <None Include="Resources\defaultSoundImage.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sound.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

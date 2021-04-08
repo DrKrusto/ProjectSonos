@@ -30,7 +30,6 @@ namespace Project_Sonos
             InitializeComponent();
             DataContext = sounds;
             this.lb_sounds.ItemsSource = sounds;
-            //this.wp_sounds.DataContext = sounds;
         }
 
         private void MoveWindow(object sender, MouseButtonEventArgs e)
@@ -109,6 +108,19 @@ namespace Project_Sonos
         {
             if (this.sounds.Any(i => i.Key == e.Key))
                 this.sounds.First(i => i.Key == e.Key).PlaySound();
+        }
+
+        private void ChangeSoundsVolume(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Sound.Volume = e.NewValue;
+        }
+
+        private void StopSounds(object sender, MouseButtonEventArgs e)
+        {
+            foreach (Sound s in this.sounds)
+            {
+                s.MediaPlayer.Stop();
+            }
         }
     }
 }
