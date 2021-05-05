@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Sonos", "Project Sonos\Project Sonos.csproj", "{F37B573F-998D-47A9-A008-6B1761D4D818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SonosLib", "SonosLib\SonosLib.csproj", "{6E1AF303-8E0B-4CF0-8490-AA2C573E538D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{F37B573F-998D-47A9-A008-6B1761D4D818}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F37B573F-998D-47A9-A008-6B1761D4D818}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F37B573F-998D-47A9-A008-6B1761D4D818}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E1AF303-8E0B-4CF0-8490-AA2C573E538D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E1AF303-8E0B-4CF0-8490-AA2C573E538D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E1AF303-8E0B-4CF0-8490-AA2C573E538D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E1AF303-8E0B-4CF0-8490-AA2C573E538D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

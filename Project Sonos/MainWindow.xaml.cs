@@ -13,8 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using SonosLib;
 using System.Collections.ObjectModel;
+using NAudio.Wave;
 
 namespace Project_Sonos
 {
@@ -23,13 +23,16 @@ namespace Project_Sonos
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<Sound> sounds = new ObservableCollection<Sound>();
+        private ObservableCollection<Sound> sounds;
+        private List<OutputDevice> outputDevices;
 
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = sounds;
-            this.lb_sounds.ItemsSource = sounds;
+            this.sounds = new ObservableCollection<Sound>();
+            this.outputDevices = OutputDevice.FetchOutputDevices();
+            DataContext = this.sounds;
+            this.lb_sounds.ItemsSource = this.sounds;
         }
 
         private void MoveWindow(object sender, MouseButtonEventArgs e)
@@ -121,6 +124,12 @@ namespace Project_Sonos
             {
                 s.MediaPlayer.Stop();
             }
+        }
+
+        private void ModifyOutputDevices(object sender, MouseButtonEventArgs e)
+        {
+            OutputDevices outputDeviceWindow = new OutputDevices(this.outputDevices);
+            outputDeviceWindow.ShowDialog();
         }
     }
 }
