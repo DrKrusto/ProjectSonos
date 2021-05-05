@@ -70,3 +70,38 @@ C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csprojAssemblyReference.cache
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\OutputDevices.g.cs
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\OutputDevices.baml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\Project Sonos.exe.config
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\Project Sonos.exe
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\Project Sonos.pdb
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\Microsoft.Win32.Registry.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\NAudio.Asio.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\NAudio.Core.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\NAudio.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\NAudio.Midi.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\NAudio.Wasapi.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\NAudio.WinForms.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\NAudio.WinMM.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\System.Security.AccessControl.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\System.Security.Principal.Windows.dll
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\Microsoft.Win32.Registry.xml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\NAudio.xml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\System.Security.AccessControl.xml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\System.Security.Principal.Windows.xml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.csprojAssemblyReference.cache
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\OutputDevices.g.cs
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\KeyBind.g.cs
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\MainWindow.g.cs
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\App.g.cs
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos_MarkupCompile.cache
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos_MarkupCompile.lref
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\App.baml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\OutputDevices.baml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\KeyBind.baml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\MainWindow.baml
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.g.resources
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project_Sonos.Properties.Resources.resources
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.csproj.GenerateResource.cache
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.csproj.CoreCompileInputs.cache
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.csproj.CopyComplete
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.exe
+S:\E6\Projet Sonos\ProjectSonos\Project Sonos\obj\Debug\Project Sonos.pdb
