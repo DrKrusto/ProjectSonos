@@ -14,7 +14,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
-using NAudio.Wave;
 
 namespace Project_Sonos
 {
@@ -24,13 +23,11 @@ namespace Project_Sonos
     public partial class MainWindow : Window
     {
         private ObservableCollection<Sound> sounds;
-        private List<OutputDevice> outputDevices;
 
         public MainWindow()
         {
             InitializeComponent();
             this.sounds = new ObservableCollection<Sound>();
-            this.outputDevices = OutputDevice.FetchOutputDevices();
             DataContext = this.sounds;
             this.lb_sounds.ItemsSource = this.sounds;
         }
@@ -128,8 +125,6 @@ namespace Project_Sonos
 
         private void ModifyOutputDevices(object sender, MouseButtonEventArgs e)
         {
-            OutputDevices outputDeviceWindow = new OutputDevices(this.outputDevices);
-            outputDeviceWindow.ShowDialog();
         }
     }
 }

@@ -42,9 +42,6 @@
                     </Grid>
                 </Grid>
                 <Label Content="X" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Webdings" FontSize="36" Foreground="#FFF0F0F0" FontWeight="Bold" Margin="13,0,15,107" Width="28" Height="46"/>
-                <Grid HorizontalAlignment="Center" Height="44" Margin="10,105,10,0" VerticalAlignment="Top" Width="44" MouseDown="ModifyOutputDevices" Cursor="Hand">
-                    <Ellipse x:Name="ellipse_changeSoundDevices" Cursor="Hand" Fill="#FF36393F" Style="{DynamicResource leftMenuButton}"/>
-                </Grid>
                 <!--<ComboBox x:Name="cb_allDevices" HorizontalAlignment="Left" Margin="0,223,0,0" VerticalAlignment="Top" Width="64" ItemsSource="{Binding}">
                     <ComboBox.ItemTemplate>
                         <DataTemplate>

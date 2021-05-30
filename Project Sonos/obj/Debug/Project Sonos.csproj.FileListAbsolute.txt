@@ -68,8 +68,6 @@ C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.exe
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.pdb
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csprojAssemblyReference.cache
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\OutputDevices.g.cs
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\OutputDevices.baml
 S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\Project Sonos.exe.config
 S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\Project Sonos.exe
 S:\E6\Projet Sonos\ProjectSonos\Project Sonos\bin\Debug\Project Sonos.pdb
