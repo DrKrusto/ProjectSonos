@@ -52,7 +52,7 @@ namespace Project_Sonos
 
         private void NewSound(object sender, RoutedEventArgs e)
         {
-            this.sounds.Add(new Sound());
+            this.sounds.Add(new Sound(this.slider_changeVolume.Value));
         }
 
         private void PlaySound(object sender, MouseButtonEventArgs e)
@@ -112,7 +112,16 @@ namespace Project_Sonos
 
         private void ChangeSoundsVolume(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Sound.Volume = e.NewValue;
+            if (this.sounds != null)
+            {
+                foreach (Sound s in this.sounds)
+                {
+                    if (s.MediaPlayer != null)
+                    {
+                        s.MediaPlayer.Volume = this.slider_changeVolume.Value;
+                    }
+                }
+            }
         }
 
         private void StopSounds(object sender, MouseButtonEventArgs e)

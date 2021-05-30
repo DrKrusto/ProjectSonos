@@ -36,19 +36,11 @@ C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.exe
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Project Sonos.pdb
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Microsoft.Win32.Registry.dll
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\NAudio.Asio.dll
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\NAudio.Core.dll
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\NAudio.dll
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\NAudio.Midi.dll
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\NAudio.Wasapi.dll
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\NAudio.WinForms.dll
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\NAudio.WinMM.dll
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\System.Runtime.WindowsRuntime.dll
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\System.Security.AccessControl.dll
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\System.Security.Principal.Windows.dll
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Windows.winmd
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\Microsoft.Win32.Registry.xml
-C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\NAudio.xml
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\System.Runtime.WindowsRuntime.xml
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\System.Security.AccessControl.xml
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\bin\Debug\System.Security.Principal.Windows.xml

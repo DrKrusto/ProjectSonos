@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -18,16 +19,15 @@ namespace Project_Sonos
         private Key? key;
         private string name;
         private string pathToSound;
-        static private double volume = 0.5;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Sound()
+        public Sound(double volume)
         {
             this.Name = "New sound";
             this.Key = null;
             this.PathToSound = "none";
             this.image = null;
-            this.mediaPlayer = new MediaPlayer();
+            this.mediaPlayer = new MediaPlayer() { Volume = volume };
         }
 
         public MediaPlayer MediaPlayer
@@ -76,12 +76,6 @@ namespace Project_Sonos
             }
         }
 
-        static public double Volume
-        {
-            set { Sound.volume = value; }
-            get { return Sound.volume; }
-        }
-
         public void ChangeImage(string path)
         {
             BitmapImage bit = new BitmapImage();
@@ -102,7 +96,6 @@ namespace Project_Sonos
         {
             if (this.PathToSound != "none")
             {
-                mediaPlayer.Volume = Sound.volume;
                 mediaPlayer.Open(new Uri(this.PathToSound));
                 mediaPlayer.Play();
             }
