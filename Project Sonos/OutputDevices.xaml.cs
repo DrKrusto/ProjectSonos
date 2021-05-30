@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using NAudio.Wave;
 
 namespace Project_Sonos
 {
@@ -46,6 +47,14 @@ namespace Project_Sonos
 
         private void CloseWindow(object sender, MouseButtonEventArgs e)
         {
+            foreach (OutputDevice device in this.outputDevices)
+            {
+                Sound.OutputDevices.Clear();
+                if (device.IsEnabled)
+                {
+                    
+                }
+            }
             this.Close();
         }
     }

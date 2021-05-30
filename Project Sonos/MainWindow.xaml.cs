@@ -120,9 +120,9 @@ namespace Project_Sonos
 
         private void StopSounds(object sender, MouseButtonEventArgs e)
         {
-            foreach (Sound s in this.sounds)
+            foreach (WaveOutEvent device in Sound.OutputDevices)
             {
-                s.MediaPlayer.Stop();
+                device.Stop();
             }
         }
 

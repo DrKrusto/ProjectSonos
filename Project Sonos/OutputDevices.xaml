@@ -17,14 +17,14 @@
                 <Label x:Name="lbl_windowClose" Content="r" HorizontalAlignment="Right" FontFamily="Webdings" MouseDown="CloseWindow" Height="22" Width="22" Style="{DynamicResource topBarButtonsQuit}" Margin="0"/>
                 <Label Content="PROJECT SONOS" HorizontalAlignment="Left" FontFamily="Carlito" Height="24" Foreground="#FFB9BBBE" Margin="0"/>
             </Grid>
-            <ListView x:Name="lv_outputDevices" HorizontalAlignment="Left" Height="356" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="380" ItemsSource="{Binding}">
+            <ListView x:Name="lv_outputDevices" Height="356" Margin="0" Grid.Row="1" Width="380" ItemsSource="{Binding}">
                 <ListView.View>
-                    <GridView>
+                    <GridView AllowsColumnReorder="False">
                         <GridViewColumn Header="Enabled">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid HorizontalAlignment="Stretch">
-                                        <CheckBox HorizontalAlignment="Center"/>
+                                        <CheckBox HorizontalAlignment="Center" IsChecked="{Binding Path=IsEnabled, Mode=TwoWay}"/>
                                     </Grid>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>

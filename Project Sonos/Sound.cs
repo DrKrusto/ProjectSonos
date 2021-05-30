@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NAudio.Wave;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,12 +14,15 @@ namespace Project_Sonos
 {
     public class Sound : INotifyPropertyChanged
     {
+        static private double volume = 0.5;
+        static private List<WaveOutEvent> outputDevices = new List<WaveOutEvent>();
+
         private ImageBrush image;
-        private MediaPlayer mediaPlayer;
+        //private MediaPlayer mediaPlayer;
+        private AudioFileReader audioFileReader;
         private Key? key;
         private string name;
         private string pathToSound;
-        static private double volume = 0.5;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Sound()
@@ -27,13 +31,13 @@ namespace Project_Sonos
             this.Key = null;
             this.PathToSound = "none";
             this.image = null;
-            this.mediaPlayer = new MediaPlayer();
+            //this.mediaPlayer = new MediaPlayer();
         }
 
-        public MediaPlayer MediaPlayer
-        {
-            get { return this.mediaPlayer; }
-        }
+        //public MediaPlayer MediaPlayer
+        //{
+        //    get { return this.mediaPlayer; }
+        //}
 
         public string Name {
             get { return this.name; }
@@ -102,10 +106,24 @@ namespace Project_Sonos
         {
             if (this.PathToSound != "none")
             {
-                mediaPlayer.Volume = Sound.volume;
-                mediaPlayer.Open(new Uri(this.PathToSound));
-                mediaPlayer.Play();
+                this.audioFileReader = new AudioFileReader(this.PathToSound);
+
+                foreach (WaveOutEvent device in Sound.outputDevices)
+                {
+                    device.Init(this.audioFileReader);
+                    device.Play();
+                }
+
+                //mediaPlayer.Volume = Sound.volume;
+                //mediaPlayer.Open(new Uri(this.PathToSound));
+                //mediaPlayer.Play();
             }
+        }
+
+        public static List<WaveOutEvent> OutputDevices
+        {
+            get { return Sound.outputDevices; }
+            set { Sound.outputDevices = value; }
         }
 
         protected void OnPropertyChanged([CallerMemberName] string key = null)
