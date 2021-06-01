@@ -23,6 +23,7 @@ namespace Project_Sonos
     public partial class MainWindow : Window
     {
         private ObservableCollection<Sound> sounds;
+        private bool keysActivated;
 
         public MainWindow()
         {
@@ -30,6 +31,7 @@ namespace Project_Sonos
             this.sounds = new ObservableCollection<Sound>();
             DataContext = this.sounds;
             this.lb_sounds.ItemsSource = this.sounds;
+            this.keysActivated = true;
         }
 
         private void MoveWindow(object sender, MouseButtonEventArgs e)
@@ -106,8 +108,11 @@ namespace Project_Sonos
 
         private void PlaySoundFromKey(object sender, KeyEventArgs e)
         {
-            if (this.sounds.Any(i => i.Key == e.Key))
-                this.sounds.First(i => i.Key == e.Key).PlaySound();
+            if (this.keysActivated)
+            {
+                if (this.sounds.Any(i => i.Key == e.Key))
+                    this.sounds.First(i => i.Key == e.Key).PlaySound();
+            }
         }
 
         private void ChangeSoundsVolume(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -129,6 +134,20 @@ namespace Project_Sonos
             foreach (Sound s in this.sounds)
             {
                 s.MediaPlayer.Stop();
+            }
+        }
+
+        private void ChangeBindingsState(object sender, MouseButtonEventArgs e) 
+        {
+            if (this.keysActivated)
+            {
+                this.keysActivated = false;
+                this.ellipse_bidingsAllowed.Fill = new SolidColorBrush(Color.FromRgb(187, 14, 14));
+            }
+            else
+            {
+                this.keysActivated = true;
+                this.ellipse_bidingsAllowed.Fill = new SolidColorBrush(Color.FromRgb(31, 201, 23));
             }
         }
     }
