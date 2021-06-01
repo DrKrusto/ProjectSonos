@@ -65,7 +65,7 @@ namespace Project_Sonos
 
         private void changeSound(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Sound files (*.mp3, *.wav)|*.mp3; *.wav" };
             if (openFileDialog.ShowDialog() == true)
             {
                 this.sounds[this.lb_sounds.SelectedIndex].ChangeSound(openFileDialog.FileName);
@@ -74,7 +74,7 @@ namespace Project_Sonos
 
         private void changeImage(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
+            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Image files (*.png, *.jpg, *.gif)|*.png; *.jpg; *.gif" };
             if (openFileDialog.ShowDialog() == true)
             {
                 this.sounds[this.lb_sounds.SelectedIndex].ChangeImage(openFileDialog.FileName);
@@ -130,10 +130,6 @@ namespace Project_Sonos
             {
                 s.MediaPlayer.Stop();
             }
-        }
-
-        private void ModifyOutputDevices(object sender, MouseButtonEventArgs e)
-        {
         }
     }
 }
