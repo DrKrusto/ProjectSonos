@@ -83,9 +83,9 @@ namespace Project_Sonos.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap sound_card {
+        public static System.Drawing.Bitmap save {
             get {
-                object obj = ResourceManager.GetObject("sound_card", resourceCulture);
+                object obj = ResourceManager.GetObject("save", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

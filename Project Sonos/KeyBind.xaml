@@ -14,7 +14,7 @@
                 <RowDefinition Height="89*"/>
             </Grid.RowDefinitions>
             <Grid Background="#FF202225" MouseDown="MoveWindow">
-                <Label x:Name="lbl_windowClose" Content="r" HorizontalAlignment="Right" FontFamily="Webdings" MouseDown="CloseWindow" Height="22" Width="22" Style="{DynamicResource topBarButtonsQuit}" Margin="0"/>
+                <Label x:Name="lbl_windowClose" Content="r" HorizontalAlignment="Right" FontFamily="Webdings" MouseDown="CloseWindow" Width="22" Style="{DynamicResource topBarButtonsQuit}" Margin="0"/>
                 <Label Content="PROJECT SONOS" HorizontalAlignment="Left" FontFamily="Carlito" Height="24" Foreground="#FFB9BBBE" Margin="0"/>
             </Grid>
             <Label x:Name="lbl_Key" Content="{Binding Key, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Background="White" Grid.Row="1"/>

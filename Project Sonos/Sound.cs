@@ -19,6 +19,7 @@ namespace Project_Sonos
         private Key? key;
         private string name;
         private string pathToSound;
+        private string pathToImage;
         public event PropertyChangedEventHandler PropertyChanged;
 
         public Sound(double volume)
@@ -26,6 +27,7 @@ namespace Project_Sonos
             this.Name = "New sound";
             this.Key = null;
             this.PathToSound = "none";
+            this.PathToImage = "none";
             this.image = null;
             this.mediaPlayer = new MediaPlayer() { Volume = volume };
         }
@@ -38,6 +40,11 @@ namespace Project_Sonos
         public string Name {
             get { return this.name; }
             set { this.name = value; }
+        }
+
+        public string PathToImage {
+            get { return this.pathToImage; }
+            set { this.pathToImage = value; }
         }
 
         public string PathToSound {
@@ -78,6 +85,7 @@ namespace Project_Sonos
 
         public void ChangeImage(string path)
         {
+            this.pathToImage = path;
             BitmapImage bit = new BitmapImage();
             bit.BeginInit();
             bit.CreateOptions = BitmapCreateOptions.IgnoreImageCache;

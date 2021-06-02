@@ -32,6 +32,10 @@ namespace Project_Sonos
             DataContext = this.sounds;
             this.lb_sounds.ItemsSource = this.sounds;
             this.keysActivated = true;
+            foreach (Sound s in SQLiteHandler.InitializeSQLite("sounds.sqlite"))
+            {
+                this.sounds.Add(s);
+            }
         }
 
         private void MoveWindow(object sender, MouseButtonEventArgs e)
@@ -49,6 +53,10 @@ namespace Project_Sonos
 
         private void CloseWindow(object sender, MouseButtonEventArgs e)
         {
+            if (MessageBox.Show("Would you like to save your sounds before exiting the applications?", "Project Sonos", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            {
+                this.SaveSounds(null, null);
+            }
             this.Close();
         }
 
@@ -149,6 +157,11 @@ namespace Project_Sonos
                 this.keysActivated = true;
                 this.ellipse_bidingsAllowed.Fill = new SolidColorBrush(Color.FromRgb(31, 201, 23));
             }
+        }
+
+        private void SaveSounds(object sender, MouseButtonEventArgs e)
+        {
+            SQLiteHandler.SaveSoundsToDatabase(new List<Sound>(this.sounds));
         }
     }
 }
