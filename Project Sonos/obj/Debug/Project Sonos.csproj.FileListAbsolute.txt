@@ -102,3 +102,4 @@ C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csproj.CopyComplete
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.exe
 C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.pdb
+C:\Users\evanr\source\repos\Project Sonos\Project Sonos\obj\Debug\Project Sonos.csprojAssemblyReference.cache

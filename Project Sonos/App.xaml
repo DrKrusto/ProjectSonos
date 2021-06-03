@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Project_Sonos"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        
+
         <Style x:Key="soundButton" TargetType="Ellipse">
             <Style.Triggers>
                 <Trigger Property="Ellipse.IsMouseOver" Value="True">

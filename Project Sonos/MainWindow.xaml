@@ -7,10 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="468.833" Width="522" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None">
     <Grid Background="#FF36393F" KeyDown="PlaySoundFromKey">
-        <Grid Background="#FF202225" MouseDown="MoveWindow" Margin="0" VerticalAlignment="Top">
-            <Label x:Name="lbl_windowClose" Content="r" HorizontalAlignment="Right" FontFamily="Webdings" MouseDown="CloseWindow" Width="22" Style="{DynamicResource topBarButtonsQuit}"/>
-            <Label x:Name="lbl_windowMinimize" Content="0" HorizontalAlignment="Right" Margin="0,1,23,0" FontFamily="Webdings" MouseDown="MinimizeWindow" Width="22" Style="{DynamicResource topBarButtons}"/>
-            <Label x:Name="label" Content="PROJECT SONOS" HorizontalAlignment="Left" FontFamily="Carlito" Height="24" Foreground="#FFB9BBBE" Margin="0"/>
+        <Grid Background="#FF202225" MouseDown="MoveWindow" Margin="0" VerticalAlignment="Top" Height="24">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lbl_windowClose" Content="r" HorizontalAlignment="Right" FontFamily="Webdings" MouseDown="CloseWindow" Width="22" Style="{DynamicResource topBarButtonsQuit}" Margin="0"/>
+            <Label x:Name="lbl_windowMinimize" Content="0" HorizontalAlignment="Right" Margin="0,0,23,0" FontFamily="Webdings" MouseDown="MinimizeWindow" Width="22" Style="{DynamicResource topBarButtons}"/>
+            <Label x:Name="label" Content="PROJECT SONOS" HorizontalAlignment="Left" FontFamily="Carlito" Foreground="#FFB9BBBE" Width="90" Margin="0"/>
         </Grid>
         <Grid Margin="0,24,0,0">
             <Grid.ColumnDefinitions>
@@ -42,38 +45,47 @@
                     </Grid>
                 </Grid>
                 <Label Content="X" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontFamily="Webdings" FontSize="36" Foreground="#FFF0F0F0" FontWeight="Bold" Margin="13,0,15,107" Width="28" Height="46"/>
-                <Grid HorizontalAlignment="Center" Height="44" Margin="10,194,10,0" VerticalAlignment="Top" Width="44" MouseDown="ChangeBindingsState" Cursor="Hand">
+                <Grid HorizontalAlignment="Center" Height="44" Margin="10,105,10,0" VerticalAlignment="Top" Width="44" MouseDown="ChangeBindingsState" Cursor="Hand">
                     <Ellipse x:Name="ellipse_bidingsAllowed" Cursor="Hand" Fill="#FF1FC917" Style="{DynamicResource leftMenuButton}"/>
                     <Label IsHitTestVisible="False" Content="7" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Wingdings" Foreground="White" FontSize="30" Height="44" Background="{x:Null}" Width="44" RenderTransformOrigin="0.5,0.5"/>
                 </Grid>
-                <Grid HorizontalAlignment="Center" Height="44" Margin="10,243,10,0" VerticalAlignment="Top" Width="44" MouseDown="SaveSounds" Cursor="Hand">
+                <Grid HorizontalAlignment="Center" Height="44" Margin="10,154,10,0" VerticalAlignment="Top" Width="44" MouseDown="SaveSounds" Cursor="Hand">
                     <Ellipse x:Name="ellipse_saveSounds" Cursor="Hand" Fill="#FF36393F" Style="{DynamicResource leftMenuButton}" Height="44" VerticalAlignment="Top"/>
                     <Label IsHitTestVisible="False" Content="&lt;" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Wingdings" Foreground="White" FontSize="34" Height="44" Background="{x:Null}" Width="42" RenderTransformOrigin="0.5,0.5" Margin="1,0,0,0"/>
                 </Grid>
             </Grid>
-            <ListBox x:Name="lb_sounds" Margin="10" Background="{x:Null}" BorderBrush="#FF3D3D40" ItemsSource="{Binding}" Focusable="False" ItemContainerStyle="{DynamicResource listContainerStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Column="1">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel IsItemsHost="True" Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=lb_sounds, Mode=OneWay}"/>
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Grid x:Name="ellipse_soundButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseLeftButtonUp="PlaySound" Width="Auto" Background="{x:Null}" Height="97" Margin="5,5,5,0">
-                            <Ellipse x:Name="ellipse_imageOfSound" HorizontalAlignment="Center" Height="75" Margin="0,0,0,0" Stroke="{x:Null}" VerticalAlignment="Bottom" Width="75" Style="{DynamicResource soundButton}" Fill="{Binding Image}" Cursor="Hand"/>
-                            <TextBox x:Name="tb_changeName" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="/Project Sonos;component/fonts/#Pragmatica Plain" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" KeyDown="tb_changeName_KeyDown"/>
-                            <Grid.ContextMenu>
-                                <ContextMenu Style="{DynamicResource contextMenuTemplate}">
-                                    <MenuItem x:Name="mi_changeSound" Header="Change sound..." Click="changeSound" FontFamily="/Project Sonos;component/fonts/#Pragmatica" Foreground="#FFB9BBBE" FontSize="12" HorizontalAlignment="Stretch"/>
-                                    <MenuItem x:Name="mi_changeKey" Header="Bind this sound to a key..." Click="OpenBindWindow" FontFamily="/Project Sonos;component/fonts/#Pragmatica" Foreground="#FFB9BBBE" FontSize="12" HorizontalAlignment="Stretch" />
-                                    <MenuItem x:Name="mi_changeImage" Header="Change image..." Click="changeImage" FontFamily="/Project Sonos;component/fonts/#Pragmatica" Foreground="#FFB9BBBE" FontSize="12" HorizontalAlignment="Stretch" />
-                                    <MenuItem x:Name="mi_delete" Header="Delete" Click="DeleteSound" FontFamily="/Project Sonos;component/fonts/#Pragmatica" Foreground="Red" FontSize="12" HorizontalAlignment="Stretch" />
-                                </ContextMenu>
-                            </Grid.ContextMenu>
-                        </Grid>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+            <Grid Grid.Column="1" HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="458">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="83*"/>
+                </Grid.RowDefinitions>
+                <ListBox x:Name="lb_sounds" Margin="10,0,10,10" Background="{x:Null}" BorderBrush="#FF3D3D40" ItemsSource="{Binding}" Focusable="False" ItemContainerStyle="{DynamicResource listContainerStyle}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Row="1">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel IsItemsHost="True" Orientation="Horizontal" Width="{Binding ActualWidth, ElementName=lb_sounds, Mode=OneWay}"/>
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid x:Name="ellipse_soundButton" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseLeftButtonUp="PlaySound" Width="Auto" Background="{x:Null}" Height="97" Margin="5,5,5,0">
+                                <Ellipse x:Name="ellipse_imageOfSound" HorizontalAlignment="Center" Height="75" Margin="0,0,0,0" Stroke="{x:Null}" VerticalAlignment="Bottom" Width="75" Style="{DynamicResource soundButton}" Fill="{Binding Image}" Cursor="Hand"/>
+                                <TextBox x:Name="tb_changeName" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="/Project Sonos;component/fonts/#Pragmatica Plain" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="Black" KeyDown="tb_changeName_KeyDown"/>
+                                <Grid.ContextMenu>
+                                    <ContextMenu Style="{DynamicResource contextMenuTemplate}">
+                                        <MenuItem x:Name="mi_changeSound" Header="Change sound..." Click="changeSound" FontFamily="/Project Sonos;component/fonts/#Pragmatica" Foreground="#FFB9BBBE" FontSize="12" HorizontalAlignment="Stretch"/>
+                                        <MenuItem x:Name="mi_changeKey" Header="Bind this sound to a key..." Click="OpenBindWindow" FontFamily="/Project Sonos;component/fonts/#Pragmatica" Foreground="#FFB9BBBE" FontSize="12" HorizontalAlignment="Stretch" />
+                                        <MenuItem x:Name="mi_changeImage" Header="Change image..." Click="changeImage" FontFamily="/Project Sonos;component/fonts/#Pragmatica" Foreground="#FFB9BBBE" FontSize="12" HorizontalAlignment="Stretch" />
+                                        <MenuItem x:Name="mi_delete" Header="Delete" Click="DeleteSound" FontFamily="/Project Sonos;component/fonts/#Pragmatica" Foreground="Red" FontSize="12" HorizontalAlignment="Stretch" />
+                                    </ContextMenu>
+                                </Grid.ContextMenu>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <Grid HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="458" Background="#FF36393F">
+                    <TextBox x:Name="tb_searchSounds" HorizontalAlignment="Left" Height="18" Margin="10,6,0,6" TextWrapping="Wrap" VerticalAlignment="Center" Width="100" TextChanged="SearchSounds" Background="{x:Null}" Foreground="White" SelectionBrush="Black"/>
+                </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </Window>

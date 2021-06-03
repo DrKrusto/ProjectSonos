@@ -163,5 +163,22 @@ namespace Project_Sonos
         {
             SQLiteHandler.SaveSoundsToDatabase(new List<Sound>(this.sounds));
         }
+
+        private void SearchSounds(object sender, TextChangedEventArgs e)
+        {
+            if (this.tb_searchSounds.Text != "")
+            {
+                IEnumerable<Sound> sounds =
+                    from sound in this.sounds
+                    where sound.Name.Contains(this.tb_searchSounds.Text) == true
+                    select sound;
+
+                this.lb_sounds.ItemsSource = new ObservableCollection<Sound>(sounds);
+            }
+            else
+            {
+                this.lb_sounds.ItemsSource = this.sounds;
+            }
+        }
     }
 }
